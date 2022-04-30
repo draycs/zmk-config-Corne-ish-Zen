@@ -10,10 +10,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define QWERTY 0
-#define NAV 1
+#define GAMING 1
 #define LOWER 2
 #define RAISE 3
-#define GAMING 4
+#define NAV 4
 
 / {
         keymap {
@@ -29,15 +29,16 @@
                         >;
                 };
 
-                nav_layer {
-                        label = "NAV";
+                gaming_layer {
+                        label = "GAMING";
                         bindings = <
-   &none      &none        &none        &none        &none        &none               &none    &none    &kp UP   &none     &none  &none
-   &none      &none        &none        &none        &none        &none               &kp HOME &kp LEFT &kp DOWN &kp RIGHT &trans &none
-   &none      &none        &none        &none        &none        &none               &kp END  &tog GAMING    &none    &none     &none  &none
-                                                    &none  &none  &none               &none    &none    &none
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I    &kp O   &kp P        &kp BKSP
+   &kp LSHFT &kp A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K    &kp L   &lt NAV SEMI &kp QUOT
+   &kp LCTL  &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp CMMA &kp DOT &kp FSLH     &kp ENTER
+                  &kp LALT &mo LOWER &kp SPC    &kp SPC &mo RAISE &kp LGUI
                         >;
                 };
+        };
 
                 lower_layer {
                         label = "LOWER";
@@ -59,15 +60,13 @@
                         >;
                 };
 
-
-                gaming_layer {
-                        label = "GAMING";
+                nav_layer {
+                        label = "NAV";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U &kp I    &kp O   &kp P        &kp BKSP
-   &kp LSHFT &kp A &kp S &kp D &kp F &kp G      &kp H &kp J &kp K    &kp L   &lt NAV SEMI &kp QUOT
-   &kp LCTL  &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M &kp CMMA &kp DOT &kp FSLH     &kp ENTER
-                  &kp LALT &mo LOWER &kp SPC    &kp SPC &mo RAISE &kp LGUI
+   &none      &none        &none        &none        &none        &none               &none    &none    &kp UP   &none     &none  &none
+   &none      &none        &none        &none        &none        &none               &kp HOME &kp LEFT &kp DOWN &kp RIGHT &trans &none
+   &none      &none        &none        &none        &none        &none               &kp END  &tog GAMING    &none    &none     &none  &none
+                                                    &none  &none  &none               &none    &none    &none
                         >;
                 };
-        };
 };
