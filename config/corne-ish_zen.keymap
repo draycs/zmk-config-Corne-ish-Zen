@@ -33,10 +33,10 @@
                 mac_qwerty_layer {
                         label = "MAC_QWERTY";
                         bindings = <
-   &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
-   &LGUI  &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
-                        &trans &trans &mt LGUI ENTER       &trans &trans &LCTL
+   &trans    &trans &trans &trans &trans &trans            &trans &trans &trans &trans &trans &trans
+   &trans    &trans &trans &trans &trans &trans            &trans &trans &trans &trans &trans &trans
+   &kp LGUI  &trans &trans &trans &trans &trans            &trans &trans &trans &trans &trans &trans
+                        &trans &trans &mt LGUI ENTER       &trans &trans &kp LCTL
                         >;
                 };
 
