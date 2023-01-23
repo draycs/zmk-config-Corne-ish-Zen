@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define WIN_QWERTY 0
-#define MAC_QWERTY 1
+#define WIN 0
+#define MAC 1
 #define GAMING 2
 #define LOWER 3
 #define RAISE 4
@@ -20,8 +20,8 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                win_qwerty_layer {
-                        label = "WIN_QWERTY";
+                win_layer {
+                        label = "WIN";
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T               &kp Y &kp U &kp I    &kp O   &kp P        &kp BKSP
    &kp LSHFT &kp A &kp S &kp D &kp F &kp G               &kp H &kp J &kp K    &kp L   &lt NAV SEMI &kp QUOT
@@ -30,13 +30,13 @@
                         >;
                 };
 
-                mac_qwerty_layer {
-                        label = "MAC_QWERTY";
+                mac_layer {
+                        label = "MAC";
                         bindings = <
-   &trans    &trans &trans &trans &trans &trans            &trans &trans &trans &trans &trans &trans
-   &trans    &trans &trans &trans &trans &trans            &trans &trans &trans &trans &trans &trans
-   &kp LGUI  &trans &trans &trans &trans &trans            &trans &trans &trans &trans &trans &trans
-                        &trans &trans &mt LGUI ENTER       &trans &trans &kp LCTL
+   &trans   &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+   &trans   &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+   &kp LGUI &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans &trans
+                          &trans &trans &mt LGUI ENTER       &trans &trans &kp LCTL
                         >;
                 };
 
@@ -73,9 +73,9 @@
                 nav_layer {
                         label = "NAV";
                         bindings = <
-   &none &none &none &none &none &none      &none    &none       &kp UP          &none     &none  &none
-   &none &none &none &none &none &none      &kp HOME &kp LEFT    &kp DOWN        &kp RIGHT &trans &none
-   &none &none &none &none &none &none      &kp END  &tog GAMING &tog MAC_QWERTY &none     &none  &none
+   &none &none &none &none &none &none      &none    &none       &kp UP   &none     &none  &none
+   &none &none &none &none &none &none      &kp HOME &kp LEFT    &kp DOWN &kp RIGHT &trans &none
+   &none &none &none &none &none &none      &kp END  &tog GAMING &tog MAC &none     &none  &none
                      &none &none &none      &none &none &none
                         >;
                 };
